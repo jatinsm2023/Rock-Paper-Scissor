@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div align="center" class="heading">Rock, Paper, Scissor <br>Game</div>
+  <div class="buttons">
+    <button id="Rock" class="butts" onclick="
+      let move = 'Rock'
+      playGame(move);
+      ">
+      <!-- Rock -->
+    </button>
+    <button id="Paper" class="butts" onclick="
+     move = 'Paper'
+    playGame(move);
+    
+    ">
+      <!-- Paper -->
+    </button>
+    <button id="Scissor" class="butts" onclick="
+     move = 'Scissor'
+    playGame(move);
+    
+    ">
+      <!-- Scissors -->
+    </button>
+  </div>
+  <br>
+  <p align="center" class="js-result">Result</p> 
+  <p align="center" class="js-move">Move</p> 
+  <p align="center" class="js-win_time">Score</p>
+
+
+  <div align="center" id="reset">
+    <button onclick="
+    win_time.Wins = 0;
+    win_time.losses = 0;
+    win_time.Tie = 0;
+    localStorage.removeItem('win_time');
+    updateScore();
+
+    document.querySelector('.js-result')
+      .innerHTML = `Result`;
+    document.querySelector('.js-move')
+      .innerHTML = `Move`;
+    ">RESET GAME</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
